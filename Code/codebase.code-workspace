@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"path": "/home/saptarshi/Desktop/Papers/RF-Buddy"
+		},
+		{
+			"path": "/home/saptarshi/Ericsson-SICS-SDR/docker/contiki-ng"
+		},
+		{
+			"path": "/home/saptarshi/gnuradio/src/gr-ieee-802154"
+		},
+		{
+			"path": "/home/saptarshi/gnuradio/src/gr-foo"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"packetbuf.h": "c"
+		}
+	}
+}

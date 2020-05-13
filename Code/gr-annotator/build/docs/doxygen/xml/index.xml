@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.13">
+  <compound refid="classgr_1_1annotator_1_1packet__annotator" kind="class"><name>gr::annotator::packet_annotator</name>
+    <member refid="classgr_1_1annotator_1_1packet__annotator_1a6b18f46bbad427f7d1969820aa13c819" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1annotator_1_1packet__annotator_1af49586cb14a674aea2e24ffe965fecbc" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1annotator_1_1packet__annotator__impl" kind="class"><name>gr::annotator::packet_annotator_impl</name>
+    <member refid="classgr_1_1annotator_1_1packet__annotator__impl_1a512f24808c0c60949e7aa132fe7f5020" kind="variable"><name>d_count</name></member>
+    <member refid="classgr_1_1annotator_1_1packet__annotator__impl_1aba72d18433a58728c4800b080b0001f7" kind="variable"><name>d_nodeid</name></member>
+    <member refid="classgr_1_1annotator_1_1packet__annotator__impl_1aa2997cdb122e92e990a60afa6b8a3858" kind="variable"><name>d_id</name></member>
+    <member refid="classgr_1_1annotator_1_1packet__annotator__impl_1a84f54dbaf487595c049edd1755d79076" kind="variable"><name>sample_start</name></member>
+    <member refid="classgr_1_1annotator_1_1packet__annotator__impl_1abcf30b53801e92aefffa0c4cfb2b5485" kind="variable"><name>sample_count</name></member>
+    <member refid="classgr_1_1annotator_1_1packet__annotator__impl_1afd79a3d90cd369510375885d37db9a0d" kind="function"><name>packet_annotator_impl</name></member>
+    <member refid="classgr_1_1annotator_1_1packet__annotator__impl_1a2126eefeb243fee75eec4d666c7819ce" kind="function"><name>~packet_annotator_impl</name></member>
+    <member refid="classgr_1_1annotator_1_1packet__annotator__impl_1a0563f9573668587a8fa0b0b71ce1124a" kind="function"><name>create_annotations</name></member>
+    <member refid="classgr_1_1annotator_1_1packet__annotator__impl_1a2461b5eb2acbaa68e5ae4a480ae3a7ef" kind="function"><name>forecast</name></member>
+    <member refid="classgr_1_1annotator_1_1packet__annotator__impl_1a8ef346a536e8e757fe033d2c8fb02916" kind="function"><name>general_work</name></member>
+  </compound>
+  <compound refid="namespacegr" kind="namespace"><name>gr</name>
+  </compound>
+  <compound refid="namespacegr_1_1annotator" kind="namespace"><name>gr::annotator</name>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="api_8h" kind="file"><name>api.h</name>
+    <member refid="api_8h_1a89457a96c0249f79735138ad68569622" kind="define"><name>ANNOTATOR_API</name></member>
+  </compound>
+  <compound refid="group__defs_8dox" kind="file"><name>group_defs.dox</name>
+  </compound>
+  <compound refid="main__page_8dox" kind="file"><name>main_page.dox</name>
+  </compound>
+  <compound refid="packet__annotator_8h" kind="file"><name>packet_annotator.h</name>
+  </compound>
+  <compound refid="packet__annotator__impl_8h" kind="file"><name>packet_annotator_impl.h</name>
+  </compound>
+  <compound refid="group__block" kind="group"><name>block</name>
+  </compound>
+  <compound refid="dir_65868b7ec7aae83f2bda3c12d19e8a36" kind="dir"><name>annotator</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir"><name>lib</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

@@ -1,0 +1,254 @@
+options:
+  parameters:
+    author: Cate Miller
+    category: '[GRC Hier Blocks]'
+    cmake_opt: ''
+    comment: ''
+    copyright: ''
+    description: Example use of the SigMF Sink block
+    gen_cmake: 'On'
+    gen_linking: dynamic
+    generate_options: qt_gui
+    hier_block_src_path: '.:'
+    id: sigmf_sink
+    max_nouts: '0'
+    output_language: python
+    placement: (0,0)
+    qt_qss_theme: ''
+    realtime_scheduling: ''
+    run: 'True'
+    run_command: '{python} -u {filename}'
+    run_options: run
+    sizing_mode: fixed
+    thread_safe_setters: ''
+    title: SigMF Sink
+    window_size: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [8, 8]
+    rotation: 0
+    state: enabled
+
+blocks:
+- name: samp_rate
+  id: variable
+  parameters:
+    comment: ''
+    value: '32000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [184, 12]
+    rotation: 0
+    state: enabled
+- name: analog_sig_source_x_0
+  id: analog_sig_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    amp: '1'
+    comment: ''
+    freq: '1000'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    offset: '0'
+    phase: '0'
+    samp_rate: samp_rate
+    type: complex
+    waveform: analog.GR_COS_WAVE
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [48, 164.0]
+    rotation: 0
+    state: enabled
+- name: blocks_throttle_0
+  id: blocks_throttle
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    ignoretag: 'True'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samples_per_second: samp_rate
+    type: complex
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [352, 204.0]
+    rotation: 0
+    state: enabled
+- name: qtgui_waterfall_sink_x_0
+  id: qtgui_waterfall_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    axislabels: 'True'
+    bw: samp_rate
+    color1: '0'
+    color10: '0'
+    color2: '0'
+    color3: '0'
+    color4: '0'
+    color5: '0'
+    color6: '0'
+    color7: '0'
+    color8: '0'
+    color9: '0'
+    comment: ''
+    fc: '0'
+    fftsize: '1024'
+    freqhalf: 'True'
+    grid: 'False'
+    gui_hint: ''
+    int_max: '10'
+    int_min: '-140'
+    label1: ''
+    label10: ''
+    label2: ''
+    label3: ''
+    label4: ''
+    label5: ''
+    label6: ''
+    label7: ''
+    label8: ''
+    label9: ''
+    legend: 'True'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    name: '""'
+    nconnections: '1'
+    showports: 'True'
+    type: complex
+    update_time: '0.10'
+    wintype: firdes.WIN_BLACKMAN_hARRIS
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [720, 72.0]
+    rotation: 0
+    state: enabled
+- name: sigmf_sink_0
+  id: sigmf_sink
+  parameters:
+    affinity: ''
+    alias: ''
+    append: 'False'
+    author: Cate Miller
+    comment: ''
+    description: This is an example output file
+    field_10_key: ''
+    field_10_type: string
+    field_10_value: ''
+    field_11_key: ''
+    field_11_type: string
+    field_11_value: ''
+    field_12_key: ''
+    field_12_type: string
+    field_12_value: ''
+    field_13_key: ''
+    field_13_type: string
+    field_13_value: ''
+    field_14_key: ''
+    field_14_type: string
+    field_14_value: ''
+    field_15_key: ''
+    field_15_type: string
+    field_15_value: ''
+    field_16_key: ''
+    field_16_type: string
+    field_16_value: ''
+    field_17_key: ''
+    field_17_type: string
+    field_17_value: ''
+    field_18_key: ''
+    field_18_type: string
+    field_18_value: ''
+    field_19_key: ''
+    field_19_type: string
+    field_19_value: ''
+    field_1_key: extra1
+    field_1_type: bool
+    field_1_value: 'True'
+    field_20_key: ''
+    field_20_type: string
+    field_20_value: ''
+    field_21_key: ''
+    field_21_type: string
+    field_21_value: ''
+    field_22_key: ''
+    field_22_type: string
+    field_22_value: ''
+    field_23_key: ''
+    field_23_type: string
+    field_23_value: ''
+    field_24_key: ''
+    field_24_type: string
+    field_24_value: ''
+    field_25_key: ''
+    field_25_type: string
+    field_25_value: ''
+    field_2_key: extra2
+    field_2_type: string
+    field_2_value: here is some metadata
+    field_3_key: ''
+    field_3_type: string
+    field_3_value: ''
+    field_4_key: ''
+    field_4_type: string
+    field_4_value: ''
+    field_5_key: ''
+    field_5_type: string
+    field_5_value: ''
+    field_6_key: ''
+    field_6_type: string
+    field_6_value: ''
+    field_7_key: ''
+    field_7_type: string
+    field_7_value: ''
+    field_8_key: ''
+    field_8_type: string
+    field_8_value: ''
+    field_9_key: ''
+    field_9_type: string
+    field_9_value: ''
+    filename: out
+    hardware: None
+    license: CC-BY-SA
+    num_extra_fields: '0'
+    samp_rate: samp_rate
+    time_mode: gr_sigmf.sigmf_time_mode_relative
+    type: fc32
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [704, 268.0]
+    rotation: 0
+    state: enabled
+
+connections:
+- [analog_sig_source_x_0, '0', blocks_throttle_0, '0']
+- [blocks_throttle_0, '0', qtgui_waterfall_sink_x_0, '0']
+- [blocks_throttle_0, '0', sigmf_sink_0, '0']
+
+metadata:
+  file_format: 1

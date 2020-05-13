@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/saptarshi/Desktop/Papers/RF-Buddy/Code/gr-annotator/swig/annotator_swig.i
+gnuradio.i
+/home/saptarshi/Desktop/Papers/RF-Buddy/Code/gr-annotator/swig/gnuradio.i
+annotator_swig_doc.i
+/home/saptarshi/Desktop/Papers/RF-Buddy/Code/gr-annotator/swig/annotator_swig_doc.i
+annotator/packet_annotator.h
+/home/saptarshi/Desktop/Papers/RF-Buddy/Code/gr-annotator/swig/annotator/packet_annotator.h
+annotator/packet_annotator.h
+/home/saptarshi/Desktop/Papers/RF-Buddy/Code/gr-annotator/swig/annotator/packet_annotator.h
+

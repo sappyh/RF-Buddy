@@ -408,7 +408,6 @@ public:
 
 								std::memcpy(buf, d_packet, d_packetlen_cnt);
 								pmt::pmt_t payload = pmt::make_blob(buf, d_packetlen_cnt);
-
 								message_port_pub(pmt::mp("out"), pmt::cons(meta, payload));
 
 								if (VERBOSE2)

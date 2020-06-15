@@ -1,5 +1,6 @@
 # RF-Buddy
 
+![Data Collector](https://github.com/sappyh/RF-Buddy/blob/master/DataCollector.pdf)
 ## SigMF
 The block records signals in SigMF format (https://github.com/gnuradio/SigMF)
 
@@ -22,8 +23,10 @@ The code includes:
 
 ## Running the data collector
 In order to run the data collector script, you need to configure the script with the following parameters:
-```  self.annotator_packet_annotator_0 = annotator.packet_annotator(1, 1)
-     self.sigmf_sink_0 = gr_sigmf.sink("cf32", 'node-1', gr_sigmf.sigmf_time_mode_relative, False)
+```python
+self.annotator_packet_annotator_0 = annotator.packet_annotator(1, 1)
+self.sigmf_sink_0 = gr_sigmf.sink("cf32", 'node-1', gr_sigmf.sigmf_time_mode_relative, False)
+
 ```
 ### packet annotater(node_id, id)
 - node_id: the MAC id for the node transmitting the message

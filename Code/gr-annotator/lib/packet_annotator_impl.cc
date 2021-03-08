@@ -79,6 +79,7 @@ void packet_annotator_impl::create_annotations(const pmt::pmt_t message)
   {
     sample_start = pmt::dict_ref(car, pmt::mp("sample_start"), pmt::get_PMT_NIL());
     sample_count = pmt::dict_ref(car, pmt::mp("sample_count"), pmt::get_PMT_NIL());
+    lqi = pmt::dict_ref(car, pmt::mp("lqi"), pmt::get_PMT_NIL());
     if (pmt::eqv(sample_start, pmt::get_PMT_NIL()))
     {
       GR_LOG_ERROR(d_logger, boost::format("Sample start key not found in dict"));
@@ -99,8 +100,8 @@ void packet_annotator_impl::create_annotations(const pmt::pmt_t message)
 
   //Create annotation that can be send as an command to the sigmf sink.
 
-  if (received_nodeid == d_id)
-  {
+  // if (received_nodeid == d_id)
+  // {
 
     GR_LOG_INFO(d_logger, boost::format("Received : %d") % d_count);
 
@@ -132,9 +133,13 @@ void packet_annotator_impl::create_annotations(const pmt::pmt_t message)
     annotation = pmt::dict_add(annotation, pmt::mp("key"), pmt::mp("rfbuddy:messageid"));
     // |Val| message_count
     annotation = pmt::dict_add(annotation, pmt::mp("val"), pmt::mp(d_count++));
+     // |key| rfbuddy: messageid
+    annotation = pmt::dict_add(annotation, pmt::mp("key"), pmt::mp("rfbuddy:lqi"));
+    // |Val| message_count
+    annotation = pmt::dict_add(annotation, pmt::mp("val"), lqi);
 
     message_port_pub(pmt::mp("annotations"), annotation);
-  }
+  // }
 }
 
 int packet_annotator_impl::general_work(int noutput_items,

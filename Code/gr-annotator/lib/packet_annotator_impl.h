@@ -36,6 +36,7 @@ namespace gr {
         //Variables Needed for annotations
         pmt::pmt_t sample_start;
         pmt::pmt_t sample_count; 
+        pmt::pmt_t lqi;
 
      public:
       packet_annotator_impl(int nodeid, int id);

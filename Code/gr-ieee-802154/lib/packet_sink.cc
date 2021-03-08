@@ -161,6 +161,8 @@ public:
 		d_sample_start = 0;
 		d_sample_count = 0;
 
+		total_count = 0;
+
 		if (VERBOSE)
 			fprintf(stderr, "syncvec: %x, threshold: %d\n", d_sync_vector, d_threshold), fflush(stderr);
 		enter_search();
@@ -267,7 +269,7 @@ public:
 							{
 								if (gr::blocks::count_bits32((d_shift_reg & 0x7FFFFFFE) ^ (CHIP_MAPPING[10] & 0xFFFFFFFE)) <= d_threshold)
 								{
-									d_sample_start = (uint64_t)(nitems_read(0)+count-6*32) * 2;
+									d_sample_start = (total_count+count-10*32)*8;
 									d_packet_byte |= 0xA;
 									if (VERBOSE2)
 										fprintf(stderr, "Found sync, 0x%x\n", d_packet_byte), fflush(stderr);
@@ -398,7 +400,7 @@ public:
 								unsigned char lqi = (scaled_lqi >= 256 ? 255 : scaled_lqi);
 
 								//Give an estimate on how long is the sample buffer
-								d_sample_count = (uint64_t)(nitems_read(0) + count + 64) * 2 - d_sample_start;
+								d_sample_count = (total_count + count)*8 - d_sample_start;
 								std::cout << d_sample_start << "," << d_sample_count << std::endl;
 
 								pmt::pmt_t meta = pmt::make_dict();
@@ -431,6 +433,7 @@ public:
 			fprintf(stderr, "Samples Processed: %d\n", ninput_items[0]), fflush(stderr);
 
 		consume(0, ninput_items[0]);
+		total_count+= count;
 
 		return 0;
 	}
@@ -465,6 +468,8 @@ private:
 
 	uint64_t d_sample_start; // Logging of when the packet preamble is starting
 	uint64_t d_sample_count; // Logging of how long is the the sample trace
+
+	uint64_t total_count;
 
 	// FIXME:
 	char buf[256];
